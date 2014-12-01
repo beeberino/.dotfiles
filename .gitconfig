@@ -1,0 +1,64 @@
+[include]
+        path = ~/.gitconfig.local
+[alias]
+        a = add
+        aa = add --all
+        amend = commit --amend
+        br = branch
+        cl = clone
+        co = checkout
+        cod = !git clone --depth 1
+        cm = commit -m
+        dm = !git branch --merged origin/master | grep -v master | xargs git branch -d
+        done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} --ff-only && git push
+        iquit = !git reset --hard && git clean -fd
+        ir = !git rebase -i origin/master
+	l = log --graph --abbrev-commit --date=relative
+        loc = !git diff --stat `git hash-object -t tree /dev/null` | tail -1 | cut -d' ' -f5
+        lst = log --graph --abbrev-commit --date=relative --stat
+        rom = !git fetch origin && git rebase origin/master
+        sa = !git submodule add
+        shove = !git remote | xargs -L 1 git push
+        st = status
+[format]
+        pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an %ae>%Creset
+[commit]
+        template = ~/.gitmessage
+[core]
+        editor = vim
+[color]
+        ui = true
+[push]
+        default = current
+[pull]
+        default = current
+        rebase = true
+[user]
+	name = twatts
+	email = twatts@peachtreebilling.com
+[alias]
+	co = checkout
+	st = status
+ci = commit
+br = branch
+df = diff
+lg = log -p
+	ss = !git remote show origin && git status
+
+[core]
+	editor = subl -w
+[color]
+	ui = true
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
