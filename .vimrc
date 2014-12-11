@@ -166,3 +166,6 @@ endfun
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim
 endif
+
+" Select syntastic ruby checker
+let g:syntastic_ruby_checkers = ['rubocop']
