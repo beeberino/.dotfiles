@@ -32,6 +32,7 @@ Plugin 'wycats/nerdtree'
 Plugin 'tpope/vim-commentary'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/Syntastic'
+Plugin 'christoomey/vim-tmux-navigator'
 " Plugin 'initrc/eclim-vundle'
 call vundle#end()
 
