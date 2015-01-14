@@ -32,13 +32,14 @@ alias vrc="vim ~/.dotfiles/.vimrc"
 
 alias chat="profanity -d"
 
-alias keith="ssh tmuxpair@10.0.1.176"
+alias keith="ssh tmuxpair@10.0.1.164"
 
 timed_command () { perl -e 'alarm shift; exec @ARGV' "$@"; }
 fuck() { ps -e | grep $1 | ruby -e "ARGF.read.to_s.split(/\\n/).each { |l| puts l.split(' ').first }" | xargs -L 1 kill -9 }
 187() { if [ "$#" -eq 1 ]; then rvm use 1.8.7-p374@$1; else rvm use 1.8.7-p374; fi }
 210() { if [ "$#" -eq 1 ]; then rvm use 2.1.0@$1; else rvm use 2.1.0; fi }
 212() { if [ "$#" -eq 1 ]; then rvm use 2.1.2@$1; else rvm use 2.1.2; fi }
+193() { if [ "$#" -eq 1 ]; then rvm use 1.9.3@$1; else rvm use 1.9.3; fi }
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -74,7 +75,10 @@ fuck() { ps -e | grep $1 | ruby -e "ARGF.read.to_s.split(/\\n/).each { |l| puts 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-plugins=(bundler gem git git-extras jsontools rvm sudo wd)
+plugins=(bundler gem git git-extras jsontools rvm sudo wd rand-quote vi-mode
+         vagrant gitignore)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zshrc.local
+
+quote
