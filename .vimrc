@@ -1,4 +1,5 @@
 set nocompatible
+set pastetoggle=<F2>
 filetype plugin indent on
 au FileType * setlocal ai sw=2 sts=2 et
 

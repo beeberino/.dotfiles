@@ -32,7 +32,7 @@ alias vrc="vim ~/.dotfiles/.vimrc"
 
 alias chat="profanity -d"
 
-alias keith="ssh tmuxpair@10.0.1.164"
+alias keith="ssh tmuxpair@10.0.1.86"
 
 timed_command () { perl -e 'alarm shift; exec @ARGV' "$@"; }
 fuck() { ps -e | grep $1 | ruby -e "ARGF.read.to_s.split(/\\n/).each { |l| puts l.split(' ').first }" | xargs -L 1 kill -9 }
