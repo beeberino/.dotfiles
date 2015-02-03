@@ -30,10 +30,12 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'wycats/nerdtree'
-Plugin 'tpope/vim-commentary'
+Plugin 'tomtom/tcomment_vim'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/Syntastic'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'skwp/greplace.vim'
+
 " Plugin 'initrc/eclim-vundle'
 call vundle#end()
 
