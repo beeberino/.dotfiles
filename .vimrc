@@ -35,6 +35,7 @@ Plugin 'ervandew/supertab'
 Plugin 'scrooloose/Syntastic'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'skwp/greplace.vim'
+Plugin 'jgdavey/tslime.vim'
 
 " Plugin 'initrc/eclim-vundle'
 call vundle#end()
@@ -104,8 +105,11 @@ nnoremap <leader>om :Emodel<space>
 nnoremap <leader>ov :Eview<space>
 
 " rspec
-nnoremap <Leader>rr :call RunCurrentSpecFile()<CR>
-nnoremap <Leader>ra :call RunAllSpecs()<CR>
+let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
+map <Leader>rr :call RunNearestSpec()<CR>
+map <Leader>rf :call RunCurrentSpecFile()<CR>
+map <Leader>rl :call RunLastSpec()<CR>
+map <Leader>ra :call RunAllSpecs()<CR>
 
 " xmpfilter - Super M and Super R
 nmap <buffer> <F5> <Plug>(xmpfilter-mark)

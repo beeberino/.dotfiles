@@ -34,6 +34,8 @@ alias chat="profanity -d"
 
 alias keith="ssh tmuxpair@10.0.1.86"
 
+alias west="(sudo chmod 1777 /tmp/wemux-wemux && sudo chown twatts /tmp/wemux-wemux && sudo rm /tmp/wemux-wemux.lock && wemux s) || (wemux s)"
+
 timed_command () { perl -e 'alarm shift; exec @ARGV' "$@"; }
 fuck() { ps -e | grep $1 | ruby -e "ARGF.read.to_s.split(/\\n/).each { |l| puts l.split(' ').first }" | xargs -L 1 kill -9 }
 187() { if [ "$#" -eq 1 ]; then rvm use 1.8.7-p374@$1; else rvm use 1.8.7-p374; fi }
