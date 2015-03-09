@@ -79,9 +79,10 @@ fuck() { ps -e | grep $1 | ruby -e "ARGF.read.to_s.split(/\\n/).each { |l| puts 
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 plugins=(bundler gem git git-extras jsontools rvm sudo wd rand-quote vi-mode
-         vagrant gitignore)
+         vagrant gitignore chucknorris)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zshrc.local
 
 quote
+chuck
