@@ -134,6 +134,9 @@ augroup CursorLine
   au WinLeave * setlocal nocursorline
 augroup END
 
+" Use guard ctags with vim
+set tags+=gems.tags
+
 " Window management
 set hidden " Allow unsaved buffers to be put in background
 set winwidth=84 " Active window min width
