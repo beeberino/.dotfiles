@@ -20,6 +20,7 @@
         sa = !git submodule add
         shove = !git remote | xargs -L 1 git push
         st = status
+        wip = !git aa && git cm 'wip' && git push
 [format]
         pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an %ae>%Creset
 [commit]
