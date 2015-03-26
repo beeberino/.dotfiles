@@ -79,7 +79,17 @@ fuck() { ps -e | grep $1 | ruby -e "ARGF.read.to_s.split(/\\n/).each { |l| puts 
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 plugins=(bundler gem git git-extras jsontools rvm sudo wd rand-quote vi-mode
-         vagrant gitignore chucknorris)
+         vagrant gitignore chucknorris zsh-syntax-highlighting)
+
+# use colors
+source ~/.zsh/colors.sh
+
+# makes color constants available
+autoload -U colors
+colors
+
+#enable colored output from ls, etc
+export CLICOLOR=1
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zshrc.local
