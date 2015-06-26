@@ -96,3 +96,5 @@ source $HOME/.zshrc.local
 
 quote
 chuck
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

@@ -49,6 +49,7 @@ lg = log -p
 
 [core]
 	editor = vim
+	excludesfile = ~/.dotfiles/.gitignore
 [color]
 	ui = true
 [color "branch"]
