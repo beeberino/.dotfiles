@@ -38,6 +38,7 @@ Plugin 'skwp/greplace.vim'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-scripts/SearchComplete'
+Plugin 'unblevable/quick-scope'
 
 " Plugin 'initrc/eclim-vundle'
 call vundle#end()
