@@ -32,6 +32,7 @@ alias zrc="vim ~/.dotfiles/.zshrc"
 alias vrc="vim ~/.dotfiles/.vimrc"
 
 alias chat="profanity -d"
+alias mine="wget -e robots=off -r -nc -np"
 
 alias keith="ssh tmuxpair@10.0.1.86"
 
