@@ -148,6 +148,9 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Zeal Integration
+nnoremap gz :!zeal --query "<cword>"&<CR><CR>
+
 augroup RubyFileTypes
   au BufNewFile,BufRead Gemfile set filetype=ruby
   au BufNewFile,BufRead Vagrantfile set filetype=ruby
