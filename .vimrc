@@ -39,6 +39,7 @@ Plugin 'jgdavey/tslime.vim'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-scripts/SearchComplete'
 Plugin 'unblevable/quick-scope'
+Plugin 't9md/vim-choosewin'
 
 " Plugin 'initrc/eclim-vundle'
 call vundle#end()
@@ -69,6 +70,11 @@ set wildmenu " Show menu options for completion
 
 let mapleader = ","
 let g:airline_powerline_fonts = 1
+
+" window selector
+nmap - <Plug>(choosewin)
+let g:choosewin_overlay_enable=1
+let g:choosewin_statusline_replace=0
 
 " Theme
 set background=dark
