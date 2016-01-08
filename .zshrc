@@ -1,7 +1,3 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-
-export ZSH_THEME="avit"
 export TERM="xterm-256color"
 
 alias ls="ls -Gp"
@@ -17,16 +13,22 @@ alias va="vagrant"
 alias t="tmux"
 alias gti="git"
 
+alias wd='jump'
+
 alias p="padrino"
 alias r="rails"
 alias ber="bundle exec rails"
 alias rpca="RAILS_ENV=production bundle exec rake assets:precompile"
 
-alias s="rspec"
+alias be='bundle exec'
+alias bi='bundle install'
+alias bu='bundle update'
+
 alias bes="bundle exec rspec"
 alias besr="bundle exec rspec --order rand"
-alias c="cucumber"
 alias bec="bundle exec cucumber"
+alias s="rspec"
+alias c="cucumber"
 
 alias zrc="vim ~/.dotfiles/.zshrc"
 alias vrc="vim ~/.dotfiles/.vimrc"
@@ -34,9 +36,7 @@ alias vrc="vim ~/.dotfiles/.vimrc"
 alias chat="profanity -d"
 alias mine="wget -e robots=off -r -nc -np"
 
-alias keith="ssh tmuxpair@10.0.1.86"
-
-alias west="(sudo chmod 1777 /tmp/wemux-wemux && sudo chown twatts /tmp/wemux-wemux && sudo rm /tmp/wemux-wemux.lock && wemux s) || (wemux s)"
+alias work="ssh thomas@10.0.40.14 -t tmux a"
 
 timed_command () { perl -e 'alarm shift; exec @ARGV' "$@"; }
 fuck() { ps -e | grep $1 | ruby -e "ARGF.read.to_s.split(/\\n/).each { |l| puts l.split(' ').first }" | xargs -L 1 kill -9 }
@@ -79,9 +79,6 @@ fuck() { ps -e | grep $1 | ruby -e "ARGF.read.to_s.split(/\\n/).each { |l| puts 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-plugins=(bundler gem git git-extras jsontools rvm sudo wd rand-quote vi-mode
-         vagrant gitignore chucknorris zsh-syntax-highlighting last-working-dir)
-
 # use colors
 source ~/.zsh/colors.sh
 
@@ -91,12 +88,11 @@ colors
 
 #enable colored output from ls, etc
 export CLICOLOR=1
+export ZSH_THEME_GIT_PROMPT_NOCACHE=1
 
-source $ZSH/oh-my-zsh.sh
 source $HOME/.zshrc.local
-
-quote
-chuck
+source $HOME/.zsh/prompt.sh
+source `jump-bin --zsh-integration`
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 eval $(thefuck --alias)
