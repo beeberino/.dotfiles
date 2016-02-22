@@ -40,6 +40,11 @@ Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-scripts/SearchComplete'
 Plugin 'unblevable/quick-scope'
 Plugin 't9md/vim-choosewin'
+Plugin 'bitc/vim-hdevtools'
+Plugin 'lukerandall/haskellmode-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'vim-scripts/a.vim'
+Plugin 'chrisbra/csv.vim'
 
 " Plugin 'initrc/eclim-vundle'
 call vundle#end()

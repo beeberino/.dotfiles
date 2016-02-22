@@ -86,6 +86,12 @@ source ~/.zsh/colors.sh
 autoload -U colors
 colors
 
+# history settings
+export HISTFILE=$HOME/.bash_history
+export HISTFILESIZE=10000 # amt of cmds in HISTFILE
+export HISTSIZE=10000     # amt of cmds in history list of current session
+export HISTAPPEND=true    # all bash shells will share the same history file instead of overwritting
+
 #enable colored output from ls, etc
 export CLICOLOR=1
 export ZSH_THEME_GIT_PROMPT_NOCACHE=1
