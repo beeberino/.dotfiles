@@ -36,6 +36,8 @@ alias vrc="vim ~/.dotfiles/.vimrc"
 alias chat="profanity -d"
 alias mine="wget -e robots=off -r -nc -np"
 
+alias mktag="ctags -R ."
+
 alias work="ssh thomas@10.0.40.14 -t tmux a"
 
 timed_command () { perl -e 'alarm shift; exec @ARGV' "$@"; }
