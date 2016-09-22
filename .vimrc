@@ -47,6 +47,7 @@ Plugin 'vim-scripts/a.vim'
 Plugin 'chrisbra/csv.vim'
 Plugin 'cyphactor/vim-open-alternate'
 Plugin 'sjl/gundo.vim'
+Plugin 'tpope/vim-dispatch'
 
 " Plugin 'initrc/eclim-vundle'
 call vundle#end()
@@ -163,6 +164,9 @@ nnoremap <C-H> <C-W><C-H>
 
 " Gundo plugin
 nnoremap <F7> :GundoToggle<CR>
+
+" Vim Dispatch bind
+nnoremap <F9> :Dispatch<CR>
 
 " Zeal Integration
 nnoremap gz :!zeal --query "<cword>"&<CR><CR>
