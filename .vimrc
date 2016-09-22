@@ -45,6 +45,8 @@ Plugin 'lukerandall/haskellmode-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-scripts/a.vim'
 Plugin 'chrisbra/csv.vim'
+Plugin 'cyphactor/vim-open-alternate'
+Plugin 'sjl/gundo.vim'
 
 " Plugin 'initrc/eclim-vundle'
 call vundle#end()
@@ -159,6 +161,9 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Gundo plugin
+nnoremap <F7> :GundoToggle<CR>
+
 " Zeal Integration
 nnoremap gz :!zeal --query "<cword>"&<CR><CR>
 
@@ -198,3 +203,7 @@ endif
 
 " Select syntastic ruby checker
 let g:syntastic_ruby_checkers = ['rubocop']
+
+" Enable Open Alternate
+set splitright
+nnoremap <leader>. :vs<CR>:OpenAlternate<CR>
