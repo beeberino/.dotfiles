@@ -36,7 +36,8 @@ alias vrc="vim ~/.dotfiles/.vimrc"
 alias chat="profanity -d"
 alias mine="wget -e robots=off -r -nc -np"
 
-alias mktag="ctags -R --exclude=.git --exclude=log *"
+alias mktag="ctags -R --exclude=.git --exclude=log ."
+alias mktagb="ctags -R --exclude=.git --exclude=log . `bundle show --paths`"
 
 alias work="ssh thomas@10.0.40.14 -t tmux a"
 
