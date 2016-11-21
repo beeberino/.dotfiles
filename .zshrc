@@ -101,7 +101,6 @@ export ZSH_THEME_GIT_PROMPT_NOCACHE=1
 
 source $HOME/.zshrc.local
 source $HOME/.zsh/prompt.sh
-source `jump-bin --zsh-integration`
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 eval $(thefuck --alias)
