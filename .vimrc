@@ -48,6 +48,8 @@ Plugin 'chrisbra/csv.vim'
 Plugin 'cyphactor/vim-open-alternate'
 Plugin 'sjl/gundo.vim'
 Plugin 'tpope/vim-dispatch'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'slashmili/alchemist.vim'
 
 " Plugin 'initrc/eclim-vundle'
 call vundle#end()

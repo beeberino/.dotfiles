@@ -5,30 +5,15 @@ alias d_ds="find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch"
 alias ruby-server="ruby -r webrick -e \"s = WEBrick::HTTPServer.new(:Port => 9090, :DocumentRoot => Dir.pwd); trap('INT') { s.shutdown }; s.start\""
 alias lines="find . -name '*.*' | xargs wc -l"
 
-alias v="vim"
-alias vmi="vim"
-alias bim="vim"
-
-alias va="vagrant"
-alias t="tmux"
-alias gti="git"
-
 alias wd='jump'
-
-alias p="padrino"
-alias r="rails"
-alias ber="bundle exec rails"
-alias rpca="RAILS_ENV=production bundle exec rake assets:precompile"
 
 alias be='bundle exec'
 alias bi='bundle install'
 alias bu='bundle update'
-
+alias ber="bundle exec rails"
+alias brake='bundle exec rake'
 alias bes="bundle exec rspec"
 alias besr="bundle exec rspec --order rand"
-alias bec="bundle exec cucumber"
-alias s="rspec"
-alias c="cucumber"
 
 alias zrc="vim ~/.dotfiles/.zshrc"
 alias vrc="vim ~/.dotfiles/.vimrc"
@@ -102,5 +87,6 @@ export ZSH_THEME_GIT_PROMPT_NOCACHE=1
 source $HOME/.zshrc.local
 source $HOME/.zsh/prompt.sh
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 eval $(thefuck --alias)
+eval "$(rbenv init -)"
+
