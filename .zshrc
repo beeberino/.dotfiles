@@ -75,10 +75,33 @@ autoload -U colors
 colors
 
 # history settings
-export HISTFILE=$HOME/.bash_history
+export HISTFILE=$HOME/.zsh_history
+export SAVEHIST=10000 # amt of cmds in HISTFILE
 export HISTFILESIZE=10000 # amt of cmds in HISTFILE
 export HISTSIZE=10000     # amt of cmds in history list of current session
 export HISTAPPEND=true    # all bash shells will share the same history file instead of overwritting
+
+setopt hist_expire_dups_first
+setopt hist_find_no_dups
+setopt hist_ignore_all_dups
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_no_store
+setopt hist_reduce_blanks
+setopt hist_save_no_dups
+setopt hist_verify
+setopt inc_append_history
+setopt no_hist_allow_clobber
+setopt no_hist_beep
+setopt share_history
+
+# command history autocomplete
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
 
 #enable colored output from ls, etc
 export CLICOLOR=1
@@ -89,4 +112,3 @@ source $HOME/.zsh/prompt.sh
 
 eval $(thefuck --alias)
 eval "$(rbenv init -)"
-
