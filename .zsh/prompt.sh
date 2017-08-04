@@ -7,7 +7,9 @@ function box_name {
 
 # Git state
 function parse_git_dirty {
-[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo ":(" || echo ":)"
+  ( [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] &&
+    [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] ) &&
+    echo ":(" || echo ":)"
 }
 function parse_git_branch {
 git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[ \1 $(parse_git_dirty) ]/"
@@ -32,7 +34,7 @@ PROMPT="
 %{$fg[white]%}:\
 %{$terminfo[bold]$fg[yellow]%}[$current_dir]%{$reset_color%} using\
  %{$fg[cyan]%}[$ruby_version]%{$reset_color%} on\
-${git_info}\
+ ${git_info}\
   $git_last_commit
 %{$fg[red]%}%* \
   %{$terminfo[bold]$fg[white]%}¯\_(ツ)_/¯ %{$reset_color%}"
