@@ -19,7 +19,7 @@ alias zrc="vim ~/.dotfiles/.zshrc"
 alias vrc="vim ~/.dotfiles/.vimrc"
 
 alias chat="profanity -d"
-alias mine="wget -e robots=off -r -nc -np"
+alias scrape="wget -e robots=off -r -nc -np"
 
 alias mktag="ctags -R --exclude=.git --exclude=log ."
 alias rtag='ctags -R --exclude=.git --exclude=log . `bundle show --paths`'
