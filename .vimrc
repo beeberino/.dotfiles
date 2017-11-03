@@ -40,8 +40,6 @@ Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-scripts/SearchComplete'
 Plugin 'unblevable/quick-scope'
 Plugin 't9md/vim-choosewin'
-Plugin 'bitc/vim-hdevtools'
-Plugin 'lukerandall/haskellmode-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-scripts/a.vim'
 Plugin 'chrisbra/csv.vim'
@@ -50,9 +48,9 @@ Plugin 'sjl/gundo.vim'
 Plugin 'tpope/vim-dispatch'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
-Plugin 'eagletmt/ghcmod-vim'
-Plugin 'eagletmt/neco-ghc'
 Plugin 'mxw/vim-jsx'
+Plugin 'VimClojure'
+
 
 " Plugin 'initrc/eclim-vundle'
 call vundle#end()
@@ -213,18 +211,12 @@ endif
 " Select syntastic ruby checker
 let g:syntastic_ruby_checkers = ['rubocop']
 
-" Haskell stuff
-let g:haskellmode_completion_ghc = 0
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-let g:ycm_semantic_triggers = {'haskell' : ['.']}
-map <silent> tw :GhcModTypeInsert<CR>
-map <silent> ts :GhcModSplitFunCase<CR>
-map <silent> tq :GhcModType<CR>
-map <silent> te :GhcModTypeClear<CR>
-
 " Enable Open Alternate
 set splitright
 nnoremap <leader>. :vs<CR>:OpenAlternate<CR>
 
 " React syntax
 let g:jsx_ext_required = 0
+
+" Clojure parenthesis coloring
+let vimclojure#ParenRainbow=1
