@@ -7,9 +7,6 @@ au FileType * setlocal ai sw=2 sts=2 et
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'garbas/vim-snipmate'
-Plugin 'tomtom/tlib_vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Townk/vim-autoclose'
 Plugin 'airblade/vim-gitgutter'
@@ -20,7 +17,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'matchit.zip'
 Plugin 'mattn/emmet-vim'
 Plugin 'rking/ag.vim'
-Plugin 'sk1418/HowMuch'
 Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'thoughtbot/vim-rspec'
@@ -28,29 +24,23 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-dispatch'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'wycats/nerdtree'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/Syntastic'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'skwp/greplace.vim'
-Plugin 'jgdavey/tslime.vim'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-scripts/SearchComplete'
 Plugin 'unblevable/quick-scope'
 Plugin 't9md/vim-choosewin'
-Plugin 'pangloss/vim-javascript'
-Plugin 'vim-scripts/a.vim'
 Plugin 'chrisbra/csv.vim'
 Plugin 'cyphactor/vim-open-alternate'
 Plugin 'sjl/gundo.vim'
-Plugin 'tpope/vim-dispatch'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'slashmili/alchemist.vim'
+Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-Plugin 'VimClojure'
-
 
 " Plugin 'initrc/eclim-vundle'
 call vundle#end()
@@ -210,6 +200,7 @@ endif
 
 " Select syntastic ruby checker
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_javascript_checkers = ['eslint']
 
 " Enable Open Alternate
 set splitright
