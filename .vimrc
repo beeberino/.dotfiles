@@ -208,6 +208,3 @@ nnoremap <leader>. :vs<CR>:OpenAlternate<CR>
 
 " React syntax
 let g:jsx_ext_required = 0
-
-" Clojure parenthesis coloring
-let vimclojure#ParenRainbow=1
