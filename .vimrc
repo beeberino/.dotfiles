@@ -48,8 +48,6 @@ Plugin 'cyphactor/vim-open-alternate'
 Plugin 'sjl/gundo.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-Plugin 'eagletmt/ghcmod-vim.git'
-Plugin 'eagletmt/neco-ghc'
 
 " Plugin 'initrc/eclim-vundle'
 call vundle#end()
@@ -209,14 +207,6 @@ endif
 " Select syntastic ruby checker
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_javascript_checkers = ['eslint']
-
-" GHC code completion
-let g:haskellmode_completion_ghc = 1
-autocmd FileType haskell setlocal omnifunc=necoghc
-map <silent> tw :GhcModTypeInsert<CR>
-map <silent> ts :GhcModSplitFunCase<CR>
-map <silent> tq :GhcModType<CR>
-map <silent> te :GhcModTypeClear<CR>
 
 " Enable Open Alternate
 set splitright
