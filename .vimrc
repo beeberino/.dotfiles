@@ -1,14 +1,9 @@
 " This is my vimrc. There are many like it, but this one is mine.
 " My vimrc is my best friend. It is my life. I must master it as I must master my life.
-"
 " Without me, my vimrc is useless. Without my vimrc, I am useless. I must fire my vimrc true. I must shoot straighter than my enemy who is trying to kill me. I must shoot him before he shoots me. I will…
-"
 " My vimrc and I know that what counts in war is not the rounds we fire, the noise of our burst, nor the smoke we make. We know that it is the hits that count. We will hit…
-"
 " My vimrc is human, even as I, because it is my life. Thus, I will learn it as a brother. I will learn its weaknesses, its strength, its parts, its accessories, its sights and its barrel. I will keep my vimrc clean and ready, even as I am clean and ready. We will become part of each other. We will…
-"
 " Before God, I swear this creed. My vimrc and I are the defenders of my country. We are the masters of our enemy. We are the saviors of my life.
-"
 " So be it, until victory is America's and there is no enemy, but peace!
 
 set nocompatible
@@ -16,7 +11,6 @@ set pastetoggle=<F2>
 filetype plugin indent on
 au FileType * setlocal ai sw=2 sts=2 et
 
-" ultisnips
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
@@ -54,6 +48,8 @@ Plugin 'cyphactor/vim-open-alternate'
 Plugin 'sjl/gundo.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'eagletmt/ghcmod-vim.git'
+Plugin 'eagletmt/neco-ghc'
 
 " Plugin 'initrc/eclim-vundle'
 call vundle#end()
@@ -213,6 +209,14 @@ endif
 " Select syntastic ruby checker
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_javascript_checkers = ['eslint']
+
+" GHC code completion
+let g:haskellmode_completion_ghc = 1
+autocmd FileType haskell setlocal omnifunc=necoghc
+map <silent> tw :GhcModTypeInsert<CR>
+map <silent> ts :GhcModSplitFunCase<CR>
+map <silent> tq :GhcModType<CR>
+map <silent> te :GhcModTypeClear<CR>
 
 " Enable Open Alternate
 set splitright
