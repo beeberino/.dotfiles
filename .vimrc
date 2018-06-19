@@ -3,7 +3,7 @@
 
 set nocompatible
 set pastetoggle=<F2>
-filetype plugin indent on
+filetype plugin indent off
 au FileType * setlocal ai sw=2 sts=2 et
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -28,6 +28,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-fireplace'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'ervandew/supertab'
@@ -36,6 +37,9 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'skwp/greplace.vim'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-scripts/SearchComplete'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'guns/vim-clojure-highlight'
+Plugin 'vim-scripts/paredit.vim'
 Plugin 'unblevable/quick-scope'
 Plugin 't9md/vim-choosewin'
 Plugin 'chrisbra/csv.vim'
@@ -43,10 +47,13 @@ Plugin 'cyphactor/vim-open-alternate'
 Plugin 'sjl/gundo.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'slashmili/alchemist.vim'
 
 " Plugin 'initrc/eclim-vundle'
 call vundle#end()
 
+filetype plugin indent on
 syntax on
 set autoindent
 set backspace=indent,eol,start
@@ -209,3 +216,9 @@ nnoremap <leader>. :vs<CR>:OpenAlternate<CR>
 
 " React syntax
 let g:jsx_ext_required = 0
+
+" Clojure Rainbow Parentheses
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
