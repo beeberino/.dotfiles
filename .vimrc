@@ -49,6 +49,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
+Plugin 'jnurmine/Zenburn'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'morhetz/gruvbox'
 
 " Plugin 'initrc/eclim-vundle'
 call vundle#end()
